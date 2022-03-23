@@ -1,0 +1,23 @@
+{
+  "name": "prisma-schema-to-sql",
+  "version": "1.0.0",
+  "description": "Simple tool to input a Prisma schema and get the generated SQL (via `migrate diff`)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janpio/prisma-schema-to-sql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janpio/prisma-schema-to-sql/issues"
+  },
+  "homepage": "https://github.com/janpio/prisma-schema-to-sql#readme",
+  "dependencies": {
+    "prisma": "^3.11.0"
+  }
+}

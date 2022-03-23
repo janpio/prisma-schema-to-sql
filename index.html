@@ -1,0 +1,55 @@
+<style>
+body {
+  padding:0;
+  margin:0;
+}
+
+.page-wrapper {
+  // background-color: red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.blue-column {
+  // background-color: blue;
+  height: 100%;
+}
+
+.green-column {
+  // background-color: green;
+  height: 100%;
+}
+
+</style>
+
+<div class='page-wrapper'>
+  <div class='row'>
+    <div class='column'>
+      <div class='blue-column'>
+        <form action="/.netlify/functions/index" method="post" target="iframe" id="form">
+          <textarea style="width:100%; min-height:80%;" name="schema" form="form">Paste Prisma schema here</textarea><br>
+          <input type="submit" value="Generate SQL">
+        </form>
+      </div>
+    </div>
+    <div class='column'>
+      <div class='green-column'>
+        <iframe name="iframe" style="width:100%; height:100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
