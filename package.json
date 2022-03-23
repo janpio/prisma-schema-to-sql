@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/janpio/prisma-schema-to-sql#readme",
   "dependencies": {
-    "prisma": "^3.11.0"
+    "execa": "^6.1.0",
+    "netlify-cli": "^9.13.4",
+    "prisma": "^3.11.0",
+    "tempy": "^2.0.0"
   }
 }
