@@ -1,10 +1,9 @@
-import tempy from 'tempy'
 const fs = require('fs')
 import {execa} from 'execa';
 
 exports.handler = async function (event, context, callback) {
   const schema = event.body
-  const schemafile = tempy.file({extension: 'prisma'})
+  const schemafile = '/tmp/schema.prisma'
 
   fs.writeFileSync(schemafile, schema)
 
