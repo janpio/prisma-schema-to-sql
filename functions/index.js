@@ -1,6 +1,12 @@
 const fs = require('fs')
 import {execa} from 'execa';
 
+path.join(__dirname, './node_modules/.bin/prisma');
+path.join(process.cwd(), './node_modules/.bin/prisma')
+
+path.join(__dirname, '../node_modules/.bin/prisma');
+path.join(process.cwd(), '../node_modules/.bin/prisma')
+
 exports.handler = async function (event, context, callback) {
   const schema = event.body
   const schemafile = '/tmp/schema.prisma'
