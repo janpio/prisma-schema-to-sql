@@ -7,7 +7,7 @@ exports.handler = async function (event, context, callback) {
 
   fs.writeFileSync(schemafile, schema)
 
-  const {stdout} = await execa('npx', ['prisma', 'validate', '--schema', schemafile]);
+  const {stdout} = await execa('./node_modules/.bin/prisma', ['validate', '--schema', schemafile]);
 
   let body = stdout
   return {
