@@ -1,5 +1,6 @@
 const fs = require('fs')
 import {execa} from 'execa';
+import path from 'path'
 
 path.join(__dirname, './node_modules/.bin/prisma');
 path.join(process.cwd(), './node_modules/.bin/prisma')
