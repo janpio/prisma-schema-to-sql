@@ -1,6 +1,7 @@
 const fs = require('fs')
-import {execa} from 'execa';
+import {execa} from 'execa'
 import path from 'path'
+const qs = require('querystring')
 
 const file1 = '/node_modules/.bin/prisma'
 path.join(process.cwd(), '.' + file1)
@@ -13,8 +14,13 @@ path.join(process.cwd(), '.' + file3)
 
 exports.handler = async function (event, context, callback) {
   console.log('event', event)
-  const schema = event.body
+  
+  const data = qs.parse(event.body)
+  console.log('data', data)
+
+  const schema = data.schema
   console.log('schema', schema)
+  
   const schemafile = '/tmp/schema.prisma'
 
   fs.writeFileSync(schemafile, schema)
